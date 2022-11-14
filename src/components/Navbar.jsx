@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../context/user-context";
@@ -8,7 +7,7 @@ import { signUserOut } from "../firebase/firebase";
 const Navbar = () => {
   const { currentUser } = useContext(UserContext);
 
-  console.log(currentUser?.email);
+  //console.log(currentUser?.email);
 
   return (
     <div>
