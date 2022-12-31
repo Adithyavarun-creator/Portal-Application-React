@@ -7,6 +7,7 @@ import RegisterPage from "./pages/RegisterPage";
 import DashboardPage from "./pages/DashboardPage";
 import { UserContext } from "./context/user-context";
 import Quizzes from "./components/Quizzes";
+import Results from "./components/Results";
 
 const App = () => {
   const { currentUser } = useContext(UserContext);
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/login-page" element={<LoginPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/testing-quiz" element={<Quizzes />} />
+        <Route path="/results-score" element={<Results />} />
       </Routes>
     </BrowserRouter>
   );

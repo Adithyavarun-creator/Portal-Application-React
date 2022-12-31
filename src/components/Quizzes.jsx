@@ -2,11 +2,14 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { collection, query, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase/firebase";
+import Select from "react-select";
+import { useNavigate } from "react-router-dom";
 
 const Quizzes = () => {
   const [questionnaire, setQuestionnaire] = useState([]);
   const [index, setIndex] = useState(0);
   const [question, setQuestion] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const q = query(collection(db, "questions&answers"));
@@ -20,14 +23,51 @@ const Quizzes = () => {
     });
   }, []);
 
-  console.log(questionnaire);
+  //console.log(questionnaire);
+
+  //console.log(questionnaire[0]?.data.correctAnswer);
+
+  const options = [
+    {
+      value: questionnaire[index]?.data.answer1,
+      label: questionnaire[index]?.data.answer1,
+    },
+    {
+      value: questionnaire[index]?.data.answer2,
+      label: questionnaire[index]?.data.answer2,
+    },
+    {
+      value: questionnaire[index]?.data.answer3,
+      label: questionnaire[index]?.data.answer3,
+    },
+    {
+      value: questionnaire[index]?.data.answer4,
+      label: questionnaire[index]?.data.answer4,
+    },
+  ];
 
   const nextButton = () => {
     setIndex(index + 1);
     setQuestion(`Question no ${index}`);
-    //setQuestion(`This is question no ${index}`);
-    //console.log(questionnaire[index]);
+
+    // if(){}
   };
+
+  const onSubmit = () => {
+    alert("test is over");
+    navigate('/results-score')
+
+    // let marks = 5;
+    // const totalMarks = 50;
+    // if (
+    //   questionnaire[index]?.data.correctAnswer ===
+    //   options.values[index].toNumber()
+    // ) {
+    //   marks = 5;
+    // }
+  };
+
+  //index is 0
 
   return (
     <div
@@ -45,31 +85,29 @@ const Quizzes = () => {
         Make sure to fill all your answers so that you cannot get back to mark
         again
       </h2>
-      <h2>
-        This is {index} question of {questionnaire.length} complete sets, main
-        starts from next one
-      </h2>
-      {questionnaire && (
+      {questionnaire ? (
         <>
           <h2 key={questionnaire[index]?.id}>
             {questionnaire[index]?.data.question}
           </h2>
-          <h3 value={questionnaire[index]?.data.answer1}>
-            {questionnaire[index]?.data.answer1}
-          </h3>
-          <h3 value={questionnaire[index]?.data.answer2}>
-            {questionnaire[index]?.data.answer2}
-          </h3>
-          <h3 value={questionnaire[index]?.data.answer3}>
-            {questionnaire[index]?.data.answer3}
-          </h3>
-          <h3 value={questionnaire[index]?.data.answer4}>
-            {questionnaire[index]?.data.answer4}
-          </h3>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <button onClick={nextButton}>Go to Next</button>
-          </div>
+
+          {index < 3 && (
+            <>
+              <Select options={options} />
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <button onClick={nextButton}>Go to Next</button>
+              </div>
+            </>
+          )}
+
+          {index > 2 && (
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <button onClick={onSubmit}>Submit all answers</button>
+            </div>
+          )}
         </>
+      ) : (
+        <span>Hold on a sec, just updating recently added questions...</span>
       )}
     </div>
   );
@@ -89,3 +127,76 @@ export default Quizzes;
           </div>
         ))} 
  */
+
+/*
+        <h3 value={questionnaire[index]?.data.answer1}>
+        {questionnaire[index]?.data.answer1}
+      </h3>
+      <h3 value={questionnaire[index]?.data.answer2}>
+        {questionnaire[index]?.data.answer2}
+      </h3>
+      <h3 value={questionnaire[index]?.data.answer3}>
+        {questionnaire[index]?.data.answer3}
+      </h3>
+      <h3 value={questionnaire[index]?.data.answer4}>
+        {questionnaire[index]?.data.answer4}
+      </h3>
+      */
+
+/**
+        <form>
+            <h2 key={questionnaire[index]?.id}>
+              {questionnaire[index]?.data.question}
+            </h2>
+            <div>
+              <input
+                type="checkbox"
+                id={questionnaire[index]?.data.answer1}
+                name={questionnaire[index]?.data.answer1}
+                value={questionnaire[index]?.data.answer1}
+              />
+              <label htmlFor={questionnaire[index]?.data.answer1}>
+                {questionnaire[index]?.data.answer1}
+              </label>
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                id={questionnaire[index]?.data.answer2}
+                name={questionnaire[index]?.data.answer2}
+                value={questionnaire[index]?.data.answer2}
+              />
+              <label htmlFor={questionnaire[index]?.data.answer2}>
+                {questionnaire[index]?.data.answer2}
+              </label>
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                id={questionnaire[index]?.data.answer3}
+                name={questionnaire[index]?.data.answer3}
+                value={questionnaire[index]?.data.answer3}
+              />
+              <label htmlFor={questionnaire[index]?.data.answer3}>
+                {questionnaire[index]?.data.answer3}
+              </label>
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                id={questionnaire[index]?.data.answer4}
+                name={questionnaire[index]?.data.answer4}
+                value={questionnaire[index]?.data.answer4}
+              />
+              <label htmlFor={questionnaire[index]?.data.answer4}>
+                {questionnaire[index]?.data.answer4}
+              </label>
+            </div>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <button onClick={nextButton}>Go to Next</button>
+            </div>
+          </form>
+       */
