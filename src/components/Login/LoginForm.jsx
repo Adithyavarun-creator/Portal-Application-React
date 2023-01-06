@@ -88,7 +88,7 @@ const LoginForm = () => {
               </button>
             </div>
             <div className={classes.loginButtonBox}>
-              <Link to="/register-page" className={classes.navLink}>
+              <Link to="/register-page" className="navLink">
                 <button className={classes.registerButton}>Register</button>
               </Link>
             </div>

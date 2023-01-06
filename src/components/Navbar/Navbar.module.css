@@ -39,3 +39,135 @@
   background-color: black;
   color: white;
 }
+
+.navMobile {
+  display: none;
+}
+
+.navMenuicon {
+  display: none;
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .navMobile {
+    display: none;
+  }
+
+  .navMenuicon {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navMobile {
+    display: none;
+  }
+
+  .navMenuicon {
+    display: none;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .navContainer {
+    display: none;
+  }
+
+  .navMobile {
+    display: flex;
+    padding: 20px 20px;
+    justify-content: flex-end;
+  }
+
+  .mobMenuicon {
+    color: black;
+    height: 35px;
+    width: 35px;
+  }
+
+  .mobModalbox {
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+    padding-top: 45px;
+    padding-bottom: 50px;
+  }
+  .mobMenuposition {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px 20px;
+  }
+
+  .mobCloseicon {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+    justify-content: flex-end;
+  }
+
+  .mobNavlist {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 480px) {
+  .navContainer {
+    display: none;
+  }
+
+  .navMobile {
+    display: flex;
+    padding: 15px 15px;
+    justify-content: flex-end;
+  }
+
+  .mobMenuicon {
+    color: black;
+    height: 30px;
+    width: 30px;
+  }
+
+  .mobModalbox {
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+    padding-top: 55px;
+    padding-bottom: 40px;
+  }
+  .mobMenuposition {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px 15px;
+  }
+
+  .mobCloseicon {
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+    justify-content: flex-end;
+  }
+
+  .mobNavlist {
+    font-size: 16px;
+    font-weight: bolder;
+  }
+}

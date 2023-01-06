@@ -4,54 +4,95 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../context/user-context";
 import { signUserOut } from "../../firebase/firebase";
+import { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { CgClose } from "react-icons/cg";
 
 const Navbar = () => {
   const { currentUser } = useContext(UserContext);
+  const [toggle, setToggle] = useState(false);
 
   //console.log(currentUser?.email);
 
   return (
-    <nav className={classes.navContainer}>
-      <div>
-        <Link to="/" className={classes.navLink}>
-          <img
-            src="https://daily-now-res.cloudinary.com/image/upload/v1614088267/landing/Daily.dev_logo.png"
-            alt="logo"
-            className={classes.navLogo}
-          />
-        </Link>
-      </div>
+    <>
+      <nav className={classes.navContainer}>
+        <div>
+          <Link to="/" className="navLink">
+            <img
+              src="https://daily-now-res.cloudinary.com/image/upload/v1614088267/landing/Daily.dev_logo.png"
+              alt="logo"
+              className={classes.navLogo}
+            />
+          </Link>
+        </div>
 
-      <div className={classes.navLinks}>
-        <Link to="/services" className={classes.navLink}>
-          <div>
-            <span className={classes.navLinksName}>Service</span>
-          </div>
-        </Link>
-
-        <Link to="/about-us" className={classes.navLink}>
-          <div>
-            <span className={classes.navLinksName}>About us</span>
-          </div>
-        </Link>
-
-        {currentUser ? (
-          <Link to="/login" className={classes.navLink}>
+        <div className={classes.navLinks}>
+          <Link to="/services" className="navLink">
             <div>
-              <span className={classes.navLinksName} onClick={signUserOut}>
-                Logout
-              </span>
+              <span className={classes.navLinksName}>Service</span>
             </div>
           </Link>
-        ) : (
-          <Link to="/login-page" className={classes.navLink}>
+
+          <Link to="/about-us" className="navLink">
             <div>
-              <span className={classes.navLinksName}>Login</span>
+              <span className={classes.navLinksName}>About us</span>
             </div>
           </Link>
-        )}
+
+          {currentUser ? (
+            <Link to="/login" className="navLink">
+              <div>
+                <span className={classes.navLinksName} onClick={signUserOut}>
+                  Logout
+                </span>
+              </div>
+            </Link>
+          ) : (
+            <Link to="/login-page" className="navLink">
+              <div>
+                <span className={classes.navLinksName}>Login</span>
+              </div>
+            </Link>
+          )}
+        </div>
+      </nav>
+
+      <div className={classes.navMobile}>
+        <GiHamburgerMenu
+          className={classes.mobMenuicon}
+          onClick={() => setToggle(!toggle)}
+        />
       </div>
-    </nav>
+
+      {toggle && (
+        <>
+          <div className={classes.mobModalbox}>
+            <div className={classes.mobMenuposition}>
+              <CgClose
+                className={classes.mobMenuicon}
+                onClick={() => setToggle(false)}
+              />
+            </div>
+            <div>
+              <Link to="/service" className="navLink">
+                <span className={classes.mobNavlist}>Service</span>
+              </Link>
+            </div>
+            <div>
+              <Link to="/about-us" className="navLink">
+                <span className={classes.mobNavlist}>About us</span>
+              </Link>
+            </div>
+            <div>
+              <Link to="/login-page" className="navLink">
+                <span className={classes.mobNavlist}>Login</span>
+              </Link>
+            </div>
+          </div>
+        </>
+      )}
+    </>
   );
 };
 
