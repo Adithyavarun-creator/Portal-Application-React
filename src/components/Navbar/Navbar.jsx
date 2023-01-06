@@ -12,34 +12,44 @@ const Navbar = () => {
 
   return (
     <nav className={classes.navContainer}>
-      <Link to="/" className={classes.navLink}>
-        <div>
+      <div>
+        <Link to="/" className={classes.navLink}>
           <img
             src="https://daily-now-res.cloudinary.com/image/upload/v1614088267/landing/Daily.dev_logo.png"
             alt="logo"
             className={classes.navLogo}
           />
-        </div>
-      </Link>
+        </Link>
+      </div>
 
       <div className={classes.navLinks}>
-        <div>
-          <span className={classes.navLinksName}>Home</span>
-        </div>
-
         <Link to="/services" className={classes.navLink}>
           <div>
             <span className={classes.navLinksName}>Service</span>
           </div>
         </Link>
 
-        <div>
-          <span className={classes.navLinksName}>About us</span>
-        </div>
+        <Link to="/about-us" className={classes.navLink}>
+          <div>
+            <span className={classes.navLinksName}>About us</span>
+          </div>
+        </Link>
 
-        <div>
-          <span className={classes.navLinksName}>Login</span>
-        </div>
+        {currentUser ? (
+          <Link to="/login" className={classes.navLink}>
+            <div>
+              <span className={classes.navLinksName} onClick={signUserOut}>
+                Logout
+              </span>
+            </div>
+          </Link>
+        ) : (
+          <Link to="/login-page" className={classes.navLink}>
+            <div>
+              <span className={classes.navLinksName}>Login</span>
+            </div>
+          </Link>
+        )}
       </div>
     </nav>
   );

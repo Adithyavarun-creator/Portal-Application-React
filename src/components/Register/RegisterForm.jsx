@@ -4,11 +4,14 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { UserContext } from "../context/user-context";
+import { UserContext } from "../../context/user-context";
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
-} from "../firebase/firebase";
+} from "../../firebase/firebase";
+import RegisterImage from "../../assets/registerimg.jpg";
+import classes from "./Register.module.css";
+import Header from "../Header/Header";
 
 const RegisterForm = () => {
   const { setCurrentUser } = useContext(UserContext);
@@ -56,7 +59,87 @@ const RegisterForm = () => {
   };
 
   return (
-    <div style={{ marginTop: "40px" }}>
+    <>
+      <div className={classes.registerContainer}>
+        <div>
+          <form className={classes.registerForm}>
+            <div className={classes.registerInputs}>
+              <label className={classes.registerLabel} htmlFor="name">
+                Name
+              </label>
+              <input
+                className={classes.registerInput}
+                id="name"
+                type="text"
+                value={displayName}
+                onChange={(e) => setdisplayName(e.target.value)}
+              />
+            </div>
+
+            <div className={classes.registerInputs}>
+              <label className={classes.registerLabel} htmlFor="email">
+                Email
+              </label>
+              <input
+                className={classes.registerInput}
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+
+            <div className={classes.registerInputs}>
+              <label className={classes.registerLabel} htmlFor="password">
+                Password
+              </label>
+              <input
+                className={classes.registerInput}
+                id="password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+
+            <div className={classes.registerInputs}>
+              <label
+                className={classes.registerLabel}
+                htmlFor="confirmPassword"
+              >
+                Confirm Password
+              </label>
+              <input
+                className={classes.registerInput}
+                id="confirmPassword"
+                type="password"
+                value={confirmPass}
+                onChange={(e) => setConfirmPass(e.target.value)}
+              />
+            </div>
+            <div className={classes.centerBox}>
+              <button className={classes.registerButton} onClick={registerForm}>
+                Register
+              </button>
+            </div>
+          </form>
+        </div>
+        <div>
+          <img
+            src={RegisterImage}
+            className={classes.registerImage}
+            alt="registerimg"
+          />
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default RegisterForm;
+
+/**
+  <div style={{ marginTop: "40px" }}>
       <form>
         <div>
           <label htmlFor="name">Name</label>
@@ -103,7 +186,4 @@ const RegisterForm = () => {
       </form>
       <ToastContainer />
     </div>
-  );
-};
-
-export default RegisterForm;
+ */

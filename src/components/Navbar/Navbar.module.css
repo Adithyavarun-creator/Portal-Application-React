@@ -4,6 +4,7 @@
   padding: 10px 8px;
   align-items: center;
   justify-content: space-between;
+  gap: 50px;
 }
 
 .navLink {

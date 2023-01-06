@@ -1,13 +1,12 @@
 import React from "react";
 import classes from "./Service.module.css";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
+import Header from "../Header/Header";
 
 const Service = () => {
   return (
     <>
-      <div className={classes.serviceHeadingBox}>
-        <h1 className={classes.serviceHeading}>Our Services</h1>
-      </div>
+      <Header heading="Our Services" />
       <div className={classes.serviceContainer}>
         <div className={classes.serviceGridbox}>
           <div className={classes.serviceIconPos}>

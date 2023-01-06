@@ -1,0 +1,30 @@
+.footerContainer {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 20px;
+}
+
+.footerMy {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footerSelf {
+  color: white;
+}
+
+.footerDetails {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.footermyIcon {
+  height: 30px;
+  width: 30px;
+  color: white;
+}
