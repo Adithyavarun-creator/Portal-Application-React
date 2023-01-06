@@ -75,18 +75,63 @@ const Navbar = () => {
               />
             </div>
             <div>
+              <Link to="/" className="navLink">
+                <span
+                  className={classes.mobNavlist}
+                  onClick={() => setToggle(false)}
+                >
+                  Home
+                </span>
+              </Link>
+            </div>
+            <div>
               <Link to="/services" className="navLink">
-                <span className={classes.mobNavlist}>Service</span>
+                <span
+                  className={classes.mobNavlist}
+                  onClick={() => setToggle(false)}
+                >
+                  Service
+                </span>
               </Link>
             </div>
             <div>
               <Link to="/about-us" className="navLink">
-                <span className={classes.mobNavlist}>About us</span>
+                <span
+                  className={classes.mobNavlist}
+                  onClick={() => setToggle(false)}
+                >
+                  About us
+                </span>
               </Link>
             </div>
             <div>
               <Link to="/login-page" className="navLink">
-                <span className={classes.mobNavlist}>Login</span>
+                <span
+                  className={classes.mobNavlist}
+                  onClick={() => setToggle(false)}
+                >
+                  Login
+                </span>
+              </Link>
+            </div>
+            <div>
+              <Link to="/dashboard" className="navLink">
+                <span
+                  className={classes.mobNavlist}
+                  onClick={() => setToggle(false)}
+                >
+                  Dashboard
+                </span>
+              </Link>
+            </div>
+            <div>
+              <Link to="/dashboard-design" className="navLink">
+                <span
+                  className={classes.mobNavlist}
+                  onClick={() => setToggle(false)}
+                >
+                  Dashboard Design
+                </span>
               </Link>
             </div>
           </div>

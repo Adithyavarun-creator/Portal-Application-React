@@ -67,3 +67,152 @@
   border-radius: 20px;
   cursor: pointer;
 }
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .loginContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 10px;
+  }
+
+  .loginImage {
+    width: 100%;
+    object-fit: fill;
+    height: 400px;
+  }
+
+  .loginFormbox {
+    /* border: 2px solid black; */
+    border-radius: 20px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  }
+
+  .loginInputBox {
+    position: relative;
+  }
+
+  .loginLabel {
+    position: absolute;
+    top: -18px;
+    font-weight: bolder;
+  }
+
+  .loginInput {
+    height: 35px;
+    font-size: 23px;
+  }
+
+  .loginInput:focus {
+    color: black;
+  }
+
+  .loginInput:invalid {
+    color: red;
+  }
+
+  .loginButtonBox {
+    margin: 0 auto;
+  }
+
+  .loginButton {
+    padding: 10px 12px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .registerButton {
+    padding: 10px 12px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    font-weight: bolder;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 480px) {
+  .loginContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .loginImage {
+    display: none;
+  }
+
+  .loginFormbox {
+    /* border: 2px solid black; */
+    border-radius: 20px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  }
+
+  .loginInputBox {
+    position: relative;
+  }
+
+  .loginLabel {
+    position: absolute;
+    top: -18px;
+    font-weight: bolder;
+  }
+
+  .loginInput {
+    height: 25px;
+    font-size: 20px;
+  }
+
+  .loginInput:focus {
+    color: black;
+  }
+
+  .loginInput:invalid {
+    color: red;
+  }
+
+  .loginButtonBox {
+    margin: 0 auto;
+  }
+
+  .loginButton {
+    padding: 10px 12px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .registerButton {
+    padding: 10px 12px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-weight: bolder;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+}
