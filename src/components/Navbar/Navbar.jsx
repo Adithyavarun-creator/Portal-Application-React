@@ -75,7 +75,7 @@ const Navbar = () => {
               />
             </div>
             <div>
-              <Link to="/service" className="navLink">
+              <Link to="/services" className="navLink">
                 <span className={classes.mobNavlist}>Service</span>
               </Link>
             </div>
