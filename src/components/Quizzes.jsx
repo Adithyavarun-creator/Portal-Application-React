@@ -11,6 +11,7 @@ const Quizzes = () => {
   const [question, setQuestion] = useState("");
   const navigate = useNavigate();
 
+  //for fetching the questions&answers collection from database
   useEffect(() => {
     const q = query(collection(db, "questions&answers"));
     onSnapshot(q, (querySnapshot) => {
@@ -22,10 +23,6 @@ const Quizzes = () => {
       );
     });
   }, []);
-
-  //console.log(questionnaire);
-
-  //console.log(questionnaire[0]?.data.correctAnswer);
 
   const options = [
     {
@@ -55,7 +52,7 @@ const Quizzes = () => {
 
   const onSubmit = () => {
     alert("test is over");
-    navigate('/results-score')
+    navigate("/results-score");
 
     // let marks = 5;
     // const totalMarks = 50;

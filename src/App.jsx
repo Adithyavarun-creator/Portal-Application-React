@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import Homepage from "./pages/Homepage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
@@ -8,6 +8,7 @@ import DashboardPage from "./pages/DashboardPage";
 import { UserContext } from "./context/user-context";
 import Quizzes from "./components/Quizzes";
 import Results from "./components/Results";
+import Service from "./components/Service/Service";
 
 const App = () => {
   const { currentUser } = useContext(UserContext);
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/testing-quiz" element={<Quizzes />} />
         <Route path="/results-score" element={<Results />} />
+        <Route path="/services" element={<Service />} />
       </Routes>
     </BrowserRouter>
   );
