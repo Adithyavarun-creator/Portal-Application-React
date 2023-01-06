@@ -1,0 +1,66 @@
+.DashboardDesignContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px;
+  gap: 20px;
+}
+
+.dashLeftbar {
+  flex-basis: 25%;
+}
+
+.dashMainbar {
+  flex: 2;
+}
+
+.dashRightbar {
+  flex: 2;
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .DashboardDesignContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px;
+    gap: 20px;
+  }
+
+  .dashLeftbar {
+    display: none;
+  }
+
+  .dashMainbar {
+    flex: 2;
+  }
+
+  .dashRightbar {
+    flex: 2;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 480px) {
+  .DashboardDesignContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    gap: 20px;
+  }
+
+  .dashLeftbar {
+    display: none;
+  }
+
+  .dashMainbar {
+    flex: 2;
+  }
+
+  .dashRightbar {
+    flex: 2;
+  }
+}

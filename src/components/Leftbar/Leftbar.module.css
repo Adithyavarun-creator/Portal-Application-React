@@ -1,0 +1,49 @@
+.leftbarcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px 20px;
+  border: 2px solid lightgray;
+  border-radius: 20px;
+}
+
+.leftbarBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.leftbarLogo {
+  height: 30px;
+  width: 30px;
+}
+
+.leftbarName {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.leftbarLists {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 8px;
+  border-radius: 20px;
+}
+
+.leftbarLists:hover {
+  background-color: aqua;
+  color: black;
+}
+
+.leftbarListicon {
+  height: 25px;
+  width: 25px;
+}
+
+.leftbarListname {
+  font-size: 20px;
+}

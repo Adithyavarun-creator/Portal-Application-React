@@ -10,7 +10,7 @@ import Quizzes from "./components/Quizzes";
 import Results from "./components/Results";
 import Service from "./components/Service/Service";
 import Footer from "./components/Footer/Footer";
-import DashboardDesign from "./components/DashboardDesign/DashboardDesign";
+import DashboardDesign from "./pages/DashboardDesign/DashboardDesign";
 
 const App = () => {
   const { currentUser } = useContext(UserContext);

@@ -10,7 +10,7 @@ const Footer = () => {
   const shareFunction = async () => {
     try {
       await navigator.share({
-        text: "Check out Kishore's website to know about placement hiring",
+        text: "Check out Kishore's website to know about placement hiring and more process",
         url: url,
       });
     } catch (error) {
@@ -57,12 +57,9 @@ const Footer = () => {
                 +91-8122238286
               </a>
             </div>
-            <div className={classes.footerDetails}>
+            <div className={classes.footerDetails} onClick={shareFunction}>
               <span>
-                <BsFillShareFill
-                  onClick={shareFunction}
-                  className={classes.footermyIcon}
-                />
+                <BsFillShareFill className={classes.footermyIcon} />
               </span>
               <span className={classes.footerSelf}>Share</span>
             </div>

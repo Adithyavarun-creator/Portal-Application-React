@@ -40,6 +40,12 @@ const Navbar = () => {
             </div>
           </Link>
 
+          <Link to="/dashboard-design" className="navLink">
+            <div>
+              <span className={classes.navLinksName}>Dashboard Design</span>
+            </div>
+          </Link>
+
           {currentUser ? (
             <Link to="/login" className="navLink">
               <div>
