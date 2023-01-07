@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { signInAuthUserWithEmailAndPassword } from "../../firebase/firebase";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import LoginImage from "../../assets/loginimg.png";
+import LoginImage from "../../assets/images/loginimg.png";
 import Header from "../Header/Header";
 
 const LoginForm = () => {

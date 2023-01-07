@@ -9,9 +9,8 @@ import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
 } from "../../firebase/firebase";
-import RegisterImage from "../../assets/registerimg.jpg";
+import RegisterImage from "../../assets/images/registerimg.jpg";
 import classes from "./Register.module.css";
-import Header from "../Header/Header";
 
 const RegisterForm = () => {
   const { setCurrentUser } = useContext(UserContext);

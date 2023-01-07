@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Kumbh Sans", sans-serif;
 }
+:root {
+  --purpleColor: #7b68ee;
+}
 
 .navLink {
   text-decoration: none;

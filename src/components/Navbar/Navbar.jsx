@@ -7,6 +7,7 @@ import { signUserOut } from "../../firebase/firebase";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CgClose } from "react-icons/cg";
+import CompanyLogo from "../../assets/images/companyLogo.png";
 
 const Navbar = () => {
   const { currentUser } = useContext(UserContext);
@@ -19,11 +20,7 @@ const Navbar = () => {
       <nav className={classes.navContainer}>
         <div>
           <Link to="/" className="navLink">
-            <img
-              src="https://daily-now-res.cloudinary.com/image/upload/v1614088267/landing/Daily.dev_logo.png"
-              alt="logo"
-              className={classes.navLogo}
-            />
+            <img src={CompanyLogo} alt="logo" className={classes.navLogo} />
           </Link>
         </div>
 
@@ -31,6 +28,12 @@ const Navbar = () => {
           <Link to="/services" className="navLink">
             <div>
               <span className={classes.navLinksName}>Service</span>
+            </div>
+          </Link>
+
+          <Link to="/our-solutions" className="navLink">
+            <div>
+              <span className={classes.navLinksName}>Solutions</span>
             </div>
           </Link>
 

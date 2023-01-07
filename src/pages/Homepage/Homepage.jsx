@@ -1,12 +1,27 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { UserContext } from "../context/user-context";
+import Expertise from "../../components/Expertise/Expertise";
+import HeaderContent from "../../components/HeaderContent/HeaderContent";
+import WhatDoing from "../../components/WhatDoing/WhatDoing";
+import { UserContext } from "../../context/user-context";
+import classes from "./Homepage.module.css";
 
 const Homepage = () => {
   const { currentUser } = useContext(UserContext);
 
   return (
-    <div
+    <div className={classes.homepageContainer}>
+      <HeaderContent />
+      <WhatDoing />
+      <Expertise />
+    </div>
+  );
+};
+
+export default Homepage;
+
+/**
+ <div
       style={{
         display: "flex",
         justifyContent: "center",
@@ -28,7 +43,4 @@ const Homepage = () => {
         </Link>
       )}
     </div>
-  );
-};
-
-export default Homepage;
+ */

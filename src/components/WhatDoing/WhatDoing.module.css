@@ -1,0 +1,134 @@
+.whatdoingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.whatdoingBox {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.whatdoingContentbox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 2px solid lightgray;
+  padding: 12px 10px;
+  border-radius: 20px;
+}
+
+.whatdoingArticleicon {
+  height: 40px;
+  width: 40px;
+}
+
+.whatdoingArticleTitle {
+  font-size: 24px;
+  color: var(--purpleColor);
+  font-weight: bolder;
+}
+
+.whatdoingArticle {
+  font-size: 22px;
+}
+
+.whatdoingArticleSVG {
+  height: 200px;
+  width: 100%;
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .whatdoingContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .whatdoingBox {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .whatdoingContentbox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid lightgray;
+    padding: 12px 10px;
+    border-radius: 20px;
+  }
+
+  .whatdoingArticleicon {
+    height: 35px;
+    width: 35px;
+  }
+
+  .whatdoingArticleTitle {
+    font-size: 17px;
+    color: var(--purpleColor);
+    font-weight: bolder;
+  }
+
+  .whatdoingArticle {
+    font-size: 15px;
+  }
+
+  .whatdoingArticleSVG {
+    height: 200px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 480px) {
+  .whatdoingContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .whatdoingBox {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .whatdoingContentbox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid lightgray;
+    padding: 12px 10px;
+    border-radius: 20px;
+  }
+
+  .whatdoingArticleicon {
+    height: 30px;
+    width: 30px;
+  }
+
+  .whatdoingArticleTitle {
+    font-size: 15px;
+    color: var(--purpleColor);
+    font-weight: bolder;
+  }
+
+  .whatdoingArticle {
+    font-size: 14px;
+  }
+
+  .whatdoingArticleSVG {
+    height: 200px;
+    width: 100%;
+  }
+}

@@ -35,8 +35,8 @@
 }
 
 .leftbarLists:hover {
-  background-color: aqua;
-  color: black;
+  background-color: var(--purpleColor);
+  color: white;
 }
 
 .leftbarListicon {

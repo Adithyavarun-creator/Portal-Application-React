@@ -1,0 +1,132 @@
+.expertiseContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+.expertiseBox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  border: 1px solid darkgray;
+  padding: 20px 20px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.expertiseBoxicon {
+  height: 50px;
+  width: 50px;
+}
+.expertiseBoxheading {
+  font-size: 22px;
+  color: var(--purpleColor);
+}
+
+.expertiseBoxarticle {
+  font-size: 20px;
+  text-align: center;
+}
+.expertiseBoxbutton {
+  padding: 10px 12px;
+  background-color: var(--purpleColor);
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+  font-size: 18px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .expertiseContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .expertiseBox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    border: 1px solid darkgray;
+    padding: 20px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+
+  .expertiseBoxicon {
+    height: 50px;
+    width: 50px;
+  }
+  .expertiseBoxheading {
+    font-size: 20px;
+    color: var(--purpleColor);
+  }
+
+  .expertiseBoxarticle {
+    font-size: 18px;
+    text-align: center;
+  }
+  .expertiseBoxbutton {
+    padding: 10px 12px;
+    background-color: var(--purpleColor);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    font-size: 18px;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 480px) {
+  .expertiseContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .expertiseBox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid darkgray;
+    padding: 20px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+
+  .expertiseBoxicon {
+    height: 50px;
+    width: 50px;
+  }
+  .expertiseBoxheading {
+    font-size: 16px;
+    color: var(--purpleColor);
+  }
+
+  .expertiseBoxarticle {
+    font-size: 14px;
+    text-align: center;
+  }
+  .expertiseBoxbutton {
+    padding: 10px 12px;
+    background-color: var(--purpleColor);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+}

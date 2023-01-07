@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 50px;
+  background-color: var(--purpleColor);
 }
 
 .navLink {
@@ -17,6 +18,7 @@
   height: 50px;
   object-fit: fill;
   cursor: pointer;
+  border-radius: 50%;
 }
 
 .navLinks {
@@ -28,16 +30,9 @@
 .navLinksName {
   font-size: 22px;
   font-weight: bold;
-  background-color: aqua;
-  color: black;
-  padding: 8px 10px;
+  color: white;
   border-radius: 20px;
   cursor: pointer;
-}
-
-.navLinksName:hover {
-  background-color: black;
-  color: white;
 }
 
 .navMobile {
@@ -86,7 +81,7 @@
   }
 
   .mobModalbox {
-    background-color: aqua;
+    background-color: var(--purpleColor);
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -139,7 +134,7 @@
   }
 
   .mobModalbox {
-    background-color: aqua;
+    background-color: var(--purpleColor);
     display: flex;
     flex-direction: column;
     gap: 40px;

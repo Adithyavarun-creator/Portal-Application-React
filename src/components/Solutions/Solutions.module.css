@@ -1,0 +1,122 @@
+.solutionContainer {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+}
+
+.solutionBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid darkgray;
+  padding: 20px 20px;
+  border-radius: 20px;
+}
+
+.solutionIconbox {
+  padding: 10px 10px;
+  background-color: var(--purpleColor);
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.solutionIcon {
+  height: 40px;
+  width: 40px;
+  color: white;
+}
+
+.solutionBoxname {
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .solutionContainer {
+    padding: 10px 10px;
+    display: grid;
+    /* flex-direction: row;
+        gap: 20px; */
+    grid-template-rows: 1fr;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  .solutionBox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid darkgray;
+    padding: 10px 10px;
+    border-radius: 20px;
+    justify-content: center;
+  }
+
+  .solutionIconbox {
+    padding: 10px 10px;
+    background-color: var(--purpleColor);
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  .solutionIcon {
+    height: 30px;
+    width: 30px;
+    color: white;
+  }
+
+  .solutionBoxname {
+    font-weight: bolder;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 480px) {
+  .solutionContainer {
+    padding: 10px 10px;
+    display: grid;
+    /* flex-direction: row;
+    gap: 20px; */
+    grid-template-rows: 1fr;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .solutionBox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid darkgray;
+    padding: 10px 10px;
+    border-radius: 20px;
+    justify-content: center;
+  }
+
+  .solutionIconbox {
+    padding: 10px 10px;
+    background-color: var(--purpleColor);
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  .solutionIcon {
+    height: 20px;
+    width: 20px;
+    color: white;
+  }
+
+  .solutionBoxname {
+    font-weight: bolder;
+    font-size: 14px;
+    margin: 0 auto;
+  }
+}

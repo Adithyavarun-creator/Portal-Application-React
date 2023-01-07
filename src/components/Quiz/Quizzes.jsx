@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { collection, query, onSnapshot } from "firebase/firestore";
-import { db } from "../firebase/firebase";
+import { db } from "../../firebase/firebase";
 import Select from "react-select";
 import { useNavigate } from "react-router-dom";
 

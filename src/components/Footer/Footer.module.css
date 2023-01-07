@@ -1,38 +1,53 @@
 .footerContainer {
-  background-color: black;
+  background-color: lightgray;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   padding: 20px 20px;
   margin-top: 40px;
 }
 
-.footerMy {
+.footerColumn {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  padding: 20px 10px;
+  gap: 10px;
 }
 
-.footerSelf {
-  color: white;
+.footerColumnname {
+  color: var(--purpleColor);
+  font-weight: bolder;
+  font-size: 24px;
 }
 
-.footerDetails {
+.footerColumnlist {
+  font-size: 22px;
+  font-weight: bolder;
+  color: black;
+  cursor: pointer;
+}
+
+.footerContactbox {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  align-items: center;
 }
 
 .footermyIcon {
-  height: 30px;
-  width: 30px;
-  color: white;
+  height: 25px;
+  width: 25px;
 }
 
-.footerContact {
+.footerContactlink {
   text-decoration: none;
-  color: white;
+  color: black;
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+.footerShare {
+  font-size: 22px;
+  font-weight: bolder;
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
@@ -43,82 +58,108 @@
 
 @media (min-width: 481px) and (max-width: 767px) {
   .footerContainer {
-    background-color: black;
+    background-color: lightgray;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
+    padding: 13px 13px;
+    margin-top: 40px;
+  }
+
+  .footerColumn {
+    display: flex;
+    flex-direction: column;
     padding: 20px 10px;
-    margin-top: 40px;
+    gap: 10px;
   }
 
-  .footerMy {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  .footerColumnname {
+    color: var(--purpleColor);
+    font-weight: bolder;
+    font-size: 22px;
   }
 
-  .footerSelf {
-    color: white;
-    font-size: 18px;
+  .footerColumnlist {
+    font-size: 12px;
+    font-weight: bolder;
+    color: black;
+    cursor: pointer;
   }
 
-  .footerDetails {
+  .footerContactbox {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    align-items: center;
-  }
-
-  .footermyIcon {
-    height: 30px;
-    width: 30px;
-    color: white;
-  }
-
-  .footerContact {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 280px) and (max-width: 480px) {
-  .footerContainer {
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 10px 10px;
-    margin-top: 40px;
-  }
-
-  .footerMy {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .footerSelf {
-    color: white;
-    font-size: 14px;
-  }
-
-  .footerDetails {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
   }
 
   .footermyIcon {
     height: 20px;
     width: 20px;
-    color: white;
   }
 
-  .footerContact {
+  .footerContactlink {
     text-decoration: none;
-    color: white;
-    font-size: 14px;
+    color: black;
+    font-weight: bolder;
+    font-size: 12px;
+  }
+
+  .footerShare {
+    font-size: 12px;
+    font-weight: bolder;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 480px) {
+  .footerContainer {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px 20px;
+    margin-top: 40px;
+  }
+
+  .footerColumn {
+    display: flex;
+    flex-direction: column;
+    /* padding: 15px 10px; */
+    gap: 10px;
+  }
+
+  .footerColumnname {
+    color: var(--purpleColor);
+    font-weight: bolder;
+    font-size: 12px;
+  }
+
+  .footerColumnlist {
+    font-size: 8px;
+    font-weight: bolder;
+    color: black;
+    cursor: pointer;
+  }
+
+  .footerContactbox {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .footermyIcon {
+    height: 20px;
+    width: 20px;
+  }
+
+  .footerContactlink {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    font-size: 8px;
+  }
+
+  .footerShare {
+    font-size: 8px;
+    font-weight: bolder;
   }
 }
