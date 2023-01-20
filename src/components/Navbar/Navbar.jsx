@@ -83,7 +83,7 @@ const Navbar = () => {
 
       {toggle && (
         <>
-          <div className={classes.mobModalbox}>
+          <div className={classes.mobModalbox} data-aos="fade-left">
             <div className={classes.mobMenuposition}>
               <CgClose
                 className={classes.mobMenuicon}
