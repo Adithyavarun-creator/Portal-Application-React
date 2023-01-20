@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "./WhatDoing.module.css";
 import Header from "../Header/Header";
 import { BiBrain } from "react-icons/bi";
@@ -8,14 +8,22 @@ import { ReactComponent as LearningSVG } from "../../assets/svg/learning.svg";
 import { ReactComponent as ClassroomSVG } from "../../assets/svg/classroom.svg";
 import { ReactComponent as OnlineSVG } from "../../assets/svg/online.svg";
 import { ReactComponent as CodingSVG } from "../../assets/svg/coding.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const WhatDoing = () => {
+  useEffect(() => {
+    AOS.init({ duration: 3000 });
+    AOS.refresh();
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Header heading="What We Do For You" />
       <div className={classes.whatdoingContainer}>
         <div className={classes.whatdoingBox}>
-          <div>
+          <div data-aos="zoom-in">
             <div className={classes.whatdoingContentbox}>
               <div>
                 <BiBrain className={classes.whatdoingArticleicon} />
@@ -34,16 +42,16 @@ const WhatDoing = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div data-aos="fade-up-right">
             <LearningSVG className={classes.whatdoingArticleSVG} />
           </div>
         </div>
 
         <div className={classes.whatdoingBox}>
-          <div>
+          <div data-aos="fade-up-left">
             <ClassroomSVG className={classes.whatdoingArticleSVG} />
           </div>
-          <div>
+          <div data-aos="zoom-in">
             <div className={classes.whatdoingContentbox}>
               <div>
                 <IoMdSchool className={classes.whatdoingArticleicon} />
@@ -64,7 +72,7 @@ const WhatDoing = () => {
         </div>
 
         <div className={classes.whatdoingBox}>
-          <div>
+          <div data-aos="zoom-in">
             <div className={classes.whatdoingContentbox}>
               <div>
                 <RiVidiconLine className={classes.whatdoingArticleicon} />
@@ -82,16 +90,16 @@ const WhatDoing = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div data-aos="fade-up-right">
             <OnlineSVG className={classes.whatdoingArticleSVG} />
           </div>
         </div>
 
         <div className={classes.whatdoingBox}>
-          <div>
+          <div data-aos="fade-up-left">
             <CodingSVG className={classes.whatdoingArticleSVG} />
           </div>
-          <div>
+          <div data-aos="zoom-in">
             <div className={classes.whatdoingContentbox}>
               <div>
                 <RiCodeSSlashFill className={classes.whatdoingArticleicon} />

@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "./Footer.module.css";
-import { BiUserCircle } from "react-icons/bi";
 import { BsWhatsapp, BsFillShareFill } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
 

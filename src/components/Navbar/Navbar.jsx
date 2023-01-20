@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "./Navbar.module.css";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
@@ -8,16 +8,23 @@ import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CgClose } from "react-icons/cg";
 import CompanyLogo from "../../assets/images/companyLogo.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Navbar = () => {
   const { currentUser } = useContext(UserContext);
   const [toggle, setToggle] = useState(false);
 
   //console.log(currentUser?.email);
+  useEffect(() => {
+    AOS.init({ duration: 3000 });
+    AOS.refresh();
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
-      <nav className={classes.navContainer}>
+      <nav className={classes.navContainer} data-aos="fade-down">
         <div>
           <Link to="/" className="navLink">
             <img src={CompanyLogo} alt="logo" className={classes.navLogo} />

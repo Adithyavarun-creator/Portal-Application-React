@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "./Login.module.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -7,6 +7,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import LoginImage from "../../assets/images/loginimg.png";
 import Header from "../Header/Header";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -47,6 +49,12 @@ const LoginForm = () => {
     }
   };
 
+  useEffect(() => {
+    AOS.init({ duration: 3000 });
+    AOS.refresh();
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Header heading="Login with your credentials" />
@@ -55,7 +63,7 @@ const LoginForm = () => {
           <img src={LoginImage} alt="login" className={classes.loginImage} />
         </div>
 
-        <div>
+        <div data-aos="fade-left">
           <form className={classes.loginFormbox}>
             <div className={classes.loginInputBox}>
               <label htmlFor="email" className={classes.loginLabel}>
