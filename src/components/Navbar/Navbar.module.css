@@ -137,7 +137,7 @@
     background-color: var(--purpleColor);
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 80px;
     position: fixed;
     top: 0;
     right: 0;
@@ -146,6 +146,7 @@
     padding-top: 55px;
     padding-bottom: 80px;
     z-index: 10;
+    height: 150vh;
   }
   .mobMenuposition {
     position: absolute;
