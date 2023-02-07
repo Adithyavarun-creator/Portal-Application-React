@@ -1,21 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import classes from "./Expertise.module.css";
 import Header from "../Header/Header";
 import { AiOutlineSolution } from "react-icons/ai";
 import { MdOutlineAssignmentTurnedIn, MdOndemandVideo } from "react-icons/md";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const Expertise = () => {
-  useEffect(() => {
-    AOS.init({ duration: 3000 });
-    AOS.refresh();
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <>
       <Header heading="Our Expertise" />
-      <div className={classes.expertiseContainer} data-aos="fade-up">
+      <div className={classes.expertiseContainer}>
         <div className={classes.expertiseBox}>
           <div>
             <AiOutlineSolution className={classes.expertiseBoxicon} />

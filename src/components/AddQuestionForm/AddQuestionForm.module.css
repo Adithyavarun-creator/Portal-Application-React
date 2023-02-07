@@ -1,0 +1,42 @@
+.AddQuestionFormbox {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px 30px;
+  /* margin: 0 auto;
+  align-items: center; */
+  border: 2px solid grey;
+  border-radius: 20px;
+}
+
+.AddQuestionFormLabelPos {
+  position: relative;
+}
+
+.AddQuestionFormLabel {
+  position: absolute;
+  top: -22px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.AddQuestionFormInput {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+}
+
+.AddQuestionFormButtonPos {
+  margin: 0 auto;
+}
+
+.AddQuestionFormButton {
+  padding: 10px 14px;
+  font-size: 20px;
+  background-color: var(--purpleColor);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  align-items: center;
+  cursor: pointer;
+}

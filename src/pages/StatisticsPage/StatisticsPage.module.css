@@ -1,0 +1,18 @@
+.DashboardDesignContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px;
+  gap: 20px;
+}
+
+.dashLeftbar {
+  flex-basis: 25%;
+}
+
+.dashMainbar {
+  flex: 2;
+}
+
+.dashRightbar {
+  flex: 2;
+}

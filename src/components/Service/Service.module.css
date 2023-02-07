@@ -27,12 +27,7 @@
   margin: 0 auto;
   flex-direction: column;
   border-radius: 30px;
-  transition: all 1.9s ease-in-out;
   border: 2px solid lightgray;
-}
-
-.serviceGridbox:hover {
-  transform: scale(1.1);
 }
 
 .serviceIconPos {
@@ -40,8 +35,8 @@
 }
 
 .serviceIcons {
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 70px;
   color: blueviolet;
 }
 

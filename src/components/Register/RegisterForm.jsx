@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useContext } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -11,8 +11,6 @@ import {
 } from "../../firebase/firebase";
 import RegisterImage from "../../assets/images/registerimg.jpg";
 import classes from "./Register.module.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const RegisterForm = () => {
   const { setCurrentUser } = useContext(UserContext);
@@ -59,16 +57,10 @@ const RegisterForm = () => {
     });
   };
 
-  useEffect(() => {
-    AOS.init({ duration: 3000 });
-    AOS.refresh();
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <>
       <div className={classes.registerContainer}>
-        <div data-aos="fade-right">
+        <div>
           <form className={classes.registerForm}>
             <div className={classes.registerInputs}>
               <label className={classes.registerLabel} htmlFor="name">

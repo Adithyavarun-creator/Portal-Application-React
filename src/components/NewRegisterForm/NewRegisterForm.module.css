@@ -1,0 +1,53 @@
+.NewRegisterFormContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  gap: 50px;
+}
+
+.NewRegisterFormHeading {
+  text-align: center;
+  font-size: 28px;
+}
+
+.NewRegisterFormContent {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.NewRegisterFormLabelPos {
+  position: relative;
+}
+
+.NewRegisterFormLabel {
+  position: absolute;
+  top: -26px;
+  font-size: 18px;
+  font-weight: bolder;
+  color: var(--purpleColor);
+}
+
+.NewRegisterFormInput {
+  height: 40px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.NewRegisterFormInput::placeholder {
+  font-size: 18px;
+}
+
+.NewRegisterFormButtonBox {
+  margin: 0 auto;
+}
+
+.NewRegisterFormButton {
+  padding: 10px 14px;
+  background-color: var(--purpleColor);
+  color: white;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+}

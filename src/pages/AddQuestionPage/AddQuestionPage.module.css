@@ -1,0 +1,14 @@
+.AddQuestionPageContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px;
+  gap: 40px;
+}
+
+.AddQuestionPageLeftbar {
+  flex-basis: 25%;
+}
+
+.AddQuestionPageMainbar {
+  flex: 4;
+}

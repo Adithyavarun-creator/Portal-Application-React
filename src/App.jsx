@@ -13,6 +13,12 @@ import Footer from "./components/Footer/Footer";
 import DashboardDesign from "./pages/DashboardDesign/DashboardDesign";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import SolutionPage from "./pages/SolutionPage/SolutionPage";
+import OverviewPage from "./pages/OverviewPage/OverviewPage";
+import StatisticsPage from "./pages/StatisticsPage/StatisticsPage";
+import SettingsPage from "./pages/SettingsPage/SettingsPage";
+import SupportPage from "./pages/SupportPage/SupportPage";
+import AddQuestionPage from "./pages/AddQuestionPage/AddQuestionPage";
+import JoinCollegePage from "./pages/JoinCollegePage/JoinCollegePage";
 
 const App = () => {
   const { currentUser } = useContext(UserContext);
@@ -32,6 +38,12 @@ const App = () => {
           <Route path="/testing-quiz" element={<Quizzes />} />
           <Route path="/results-score" element={<Results />} />
           <Route path="/services" element={<Service />} />
+          <Route path="/overview-page" element={<OverviewPage />} />
+          <Route path="/statistics-page" element={<StatisticsPage />} />
+          <Route path="/settings-page" element={<SettingsPage />} />
+          <Route path="/support-page" element={<SupportPage />} />
+          <Route path="/add-questions" element={<AddQuestionPage />} />
+          <Route path="/join-here" element={<JoinCollegePage />} />
         </Routes>
         <Footer />
       </BrowserRouter>

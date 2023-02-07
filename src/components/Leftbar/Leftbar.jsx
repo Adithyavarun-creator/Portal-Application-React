@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "./Leftbar.module.css";
 import { AiOutlineHome } from "react-icons/ai";
 import { TfiStatsUp } from "react-icons/tfi";
@@ -20,33 +21,65 @@ const Leftbar = () => {
           <span className={classes.leftbarName}>Company</span>
         </div>
 
-        <div className={classes.leftbarLists}>
-          <span>
-            <AiOutlineHome className={classes.leftbarListicon} />
-          </span>
-          <span className={classes.leftbarListname}>Overview</span>
-        </div>
+        <Link
+          to="/overview-page"
+          style={{ color: "black", textDecoration: "none" }}
+        >
+          <div className={classes.leftbarLists}>
+            <span>
+              <AiOutlineHome className={classes.leftbarListicon} />
+            </span>
+            <span className={classes.leftbarListname}>Overview</span>
+          </div>
+        </Link>
 
-        <div className={classes.leftbarLists}>
-          <span>
-            <TfiStatsUp className={classes.leftbarListicon} />
-          </span>
-          <span className={classes.leftbarListname}>Statistics</span>
-        </div>
+        <Link
+          to="/statistics-page"
+          style={{ color: "black", textDecoration: "none" }}
+        >
+          <div className={classes.leftbarLists}>
+            <span>
+              <TfiStatsUp className={classes.leftbarListicon} />
+            </span>
+            <span className={classes.leftbarListname}>Statistics</span>
+          </div>
+        </Link>
 
-        <div className={classes.leftbarLists}>
-          <span>
-            <FiSettings className={classes.leftbarListicon} />
-          </span>
-          <span className={classes.leftbarListname}>Settings</span>
-        </div>
+        <Link
+          to="/settings-page"
+          style={{ color: "black", textDecoration: "none" }}
+        >
+          <div className={classes.leftbarLists}>
+            <span>
+              <FiSettings className={classes.leftbarListicon} />
+            </span>
+            <span className={classes.leftbarListname}>Settings</span>
+          </div>
+        </Link>
 
-        <div className={classes.leftbarLists}>
-          <span>
-            <BiSupport className={classes.leftbarListicon} />
-          </span>
-          <span className={classes.leftbarListname}>Support</span>
-        </div>
+        <Link
+          to="/add-questions"
+          style={{ color: "black", textDecoration: "none" }}
+        >
+          <div className={classes.leftbarLists}>
+            <span>
+              <FiSettings className={classes.leftbarListicon} />
+            </span>
+            <span className={classes.leftbarListname}>Add Questions</span>
+          </div>
+        </Link>
+
+        <Link
+          to="/support-page"
+          style={{ color: "black", textDecoration: "none" }}
+        >
+          <div className={classes.leftbarLists}>
+            <span>
+              <BiSupport className={classes.leftbarListicon} />
+            </span>
+            <span className={classes.leftbarListname}>Support</span>
+          </div>
+        </Link>
       </div>
     </>
   );
