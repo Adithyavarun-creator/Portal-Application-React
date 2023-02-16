@@ -43,13 +43,15 @@ const Quizzes = () => {
     },
   ];
 
-  const nextButton = () => {
+  //function for movieng to next question 
+    const nextButton = () => {
     setIndex(index + 1);
     setQuestion(`Question no ${index}`);
 
     // if(){}
   };
 
+  //for submitting the answers and evaluating
   const onSubmit = () => {
     alert("test is over");
     navigate("/results-score");

@@ -1,9 +1,8 @@
-import { addDoc, collection, Timestamp } from "firebase/firestore";
 import React, { useState } from "react";
-import { db } from "../../firebase/firebase";
 import classes from "./NewRegisterForm.module.css";
 import { useForm, ValidationError } from "@formspree/react";
 
+//this is purely for getting email notification about each college form
 const NewRegisterForm = () => {
   const [state, handleSubmit] = useForm("mlekjdkl");
 
@@ -18,35 +17,6 @@ const NewRegisterForm = () => {
     return <p>Thanks for joining!</p>;
   }
 
-  //   //   const registerCollegeDetails = async (e) => {
-  //   //     e.preventDefault();
-  //   //     if (!name || !email || !mobile || !college || !address || !principal) {
-  //   //       alert("Fill all the fields and submit to get registered");
-  //   //     }
-  //   //     try {
-  //   //       await addDoc(collection(db, "RegisteredColleges"), {
-  //   //         name: name,
-  //   //         email: email,
-  //   //         mobile: mobile,
-  //   //         college: college,
-  //   //         address: address,
-  //   //         principal: principal,
-  //   //         created: Timestamp.now(),
-  //   //       });
-  //   //       alert(
-  //   //         "Your details are been stored, soon you will be contacted by our team"
-  //   //       );
-  //   //       setName("");
-  //   //       setEmail("");
-  //   //       setMobile("");
-  //   //       setPrincipal("");
-  //   //       setCollege("");
-  //   //       setAddress("");
-  //   //     } catch (err) {
-  //   //       alert(err);
-  //   //     }
-  //   //   };
-
   return (
     <div className={classes.NewRegisterFormContainer}>
       <div>
@@ -58,7 +28,8 @@ const NewRegisterForm = () => {
       <div>
         <form
           className={classes.NewRegisterFormContent}
-          onSubmit={handleSubmit}
+          action="https://formspree.io/f/mlekjdkl"
+          method="POST"
         >
           <div className={classes.NewRegisterFormLabelPos}>
             <label htmlFor="name" className={classes.NewRegisterFormLabel}>
@@ -68,6 +39,7 @@ const NewRegisterForm = () => {
               className={classes.NewRegisterFormInput}
               type="text"
               id="name"
+              name="name"
               placeholder="Enter Your Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -84,6 +56,7 @@ const NewRegisterForm = () => {
               className={classes.NewRegisterFormInput}
               type="email"
               id="email"
+              name="email"
               placeholder="Enter Your email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -104,6 +77,7 @@ const NewRegisterForm = () => {
               id="mobile"
               className={classes.NewRegisterFormInput}
               type="number"
+              name="mobile"
               placeholder="Enter Your Mobile Number"
               value={mobile}
               onChange={(e) => setMobile(e.target.value)}
@@ -123,6 +97,7 @@ const NewRegisterForm = () => {
               id="principal"
               className={classes.NewRegisterFormInput}
               type="text"
+              name="principal"
               placeholder="Enter Principal name"
               value={principal}
               onChange={(e) => setPrincipal(e.target.value)}
@@ -145,6 +120,7 @@ const NewRegisterForm = () => {
               className={classes.NewRegisterFormInput}
               type="text"
               id="collegeName"
+              name="collegeName"
               placeholder="Enter College/University Name"
               value={college}
               onChange={(e) => setCollege(e.target.value)}
@@ -168,6 +144,7 @@ const NewRegisterForm = () => {
               id="collegeAddress"
               className={classes.NewRegisterFormInput}
               type="text"
+              name="collegeAddress"
               placeholder="Enter Address of College/University"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
@@ -195,26 +172,3 @@ const NewRegisterForm = () => {
 };
 
 export default NewRegisterForm;
-
-// import React from "react";
-// import { useForm, ValidationError } from "@formspree/react";
-// const NewRegisterForm = () => {
-//   const [state, handleSubmit] = useForm("mlekjdkl");
-//   if (state.succeeded) {
-//     return <p>Thanks for joining!</p>;
-//   }
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       <label htmlFor="email">Email Address</label>
-//       <input id="email" type="email" name="email" />
-//       <ValidationError prefix="Email" field="email" errors={state.errors} />
-//       <textarea id="message" name="message" />
-//       <ValidationError prefix="Message" field="message" errors={state.errors} />
-//       <button type="submit" disabled={state.submitting}>
-//         Submit
-//       </button>
-//     </form>
-//   );
-// };
-
-// export default NewRegisterForm;
