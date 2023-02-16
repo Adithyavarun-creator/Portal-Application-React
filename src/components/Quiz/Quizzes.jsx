@@ -43,8 +43,8 @@ const Quizzes = () => {
     },
   ];
 
-  //function for movieng to next question 
-    const nextButton = () => {
+  //function for movieng to next question
+  const nextButton = () => {
     setIndex(index + 1);
     setQuestion(`Question no ${index}`);
 
@@ -55,15 +55,19 @@ const Quizzes = () => {
   const onSubmit = () => {
     alert("test is over");
     navigate("/results-score");
-
     // let marks = 5;
-    // const totalMarks = 50;
+    // const totalMarks = 100;
+    //let finaliseMark
     // if (
     //   questionnaire[index]?.data.correctAnswer ===
     //   options.values[index].toNumber()
     // ) {
-    //   marks = 5;
-    // }
+    //    finaliseMark = marks[index] = marks[index] + 5;
+    // finaliseMark > 0 && `Your score is ${finaliseMark}/totalMarks`
+    // }else{
+    // finaliseMark = marks[index] = marks[index] - 5;
+    //finaliseMark <0 && "Your score is 0"
+    //}
   };
 
   //index is 0

@@ -13,6 +13,8 @@ const AddQuestionForm = () => {
   const [answer4, setAnswer4] = useState("");
   const [correct, setCorrect] = useState("");
 
+
+  //add a new question and gets generated to frontend part
   const submitNewQuestion = async (e) => {
     e.preventDefault();
     if (!question || !answer1 || !answer2 || !answer3 || !answer4 || !correct) {
